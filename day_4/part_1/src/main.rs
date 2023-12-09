@@ -10,7 +10,6 @@ fn process(input: &str) -> i32 {
     for line in input.lines() {
         let card_numbers = line.split(':').collect::<Vec<&str>>()[1]
             .split('|')
-            .map(|s| s.trim())
             .collect::<Vec<&str>>();
         let winning_numbers: HashSet<i32> = HashSet::from_iter(
             card_numbers[0]
